@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galletta Bros | Premium Build & Clean</title>
+  <meta name="description" content="Elegance in every detail. Discover the luxury transformation provided by Galletta Bros." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="loading">
+  
+  <!-- Navigation -->
+  <nav class="navbar" data-anim="nav-drop">
+    <div class="nav-brand">GB.</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="nav-cta">Inquire</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-wrapper">
+      <video class="hero-bg" src="assets/2025-10-27_openart-video_bf537937.mp4" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%;"></video>
+    </div>
+    
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title" data-anim="stagger-up">
+        <span>Galletta Bros.</span>
+        <span>We Got You Covered.</span>
+      </h1>
+      <p class="hero-tagline" data-anim="fade-up" data-delay="0.4">Bringing cinematic detail to exterior restoration and premium maintenance.</p>
+      <a href="#services" class="primary-button" data-anim="fade-up" data-delay="0.6">Explore Services</a>
+    </div>
+    
+    <div class="scroll-indicator" data-anim="fade-up" data-delay="0.8">
+      <span>Scroll</span>
+      <div class="indicator-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-section">
+    <div class="marquee-content">
+      <span>JUNK REMOVAL</span> <span>•</span>
+      <span>PRESSURE WASHING</span> <span>•</span>
+      <span>SNOW REMOVAL</span> <span>•</span>
+      <span>PROPERTY CLEAN UP</span> <span>•</span>
+      <span>JUNK REMOVAL</span> <span>•</span>
+      <span>PRESSURE WASHING</span> <span>•</span>
+      <span>SNOW REMOVAL</span> <span>•</span>
+      <span>PROPERTY CLEAN UP</span> <span>•</span>
+    </div>
+  </div>
+
+  <!-- About Statement -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <h2 class="serif-title" data-anim="fade-up">We don't just clean.<br>We <em>restore</em> the art of the architecture.</h2>
+      <p class="about-text" data-anim="fade-up" data-delay="0.2">
+        Galletta Bros transcends traditional contracting. We employ high-end techniques, state-of-the-art restorative tools, and an eye for 
+        luxury to breathe life back into premium properties and fleets.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Bento Grid -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <span class="eyebrow" data-anim="fade-up">Our Capabilities</span>
+      <h2 class="section-title" data-anim="fade-up">The Standard</h2>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Service 1 -->
+      <div class="bento-card bento-large" data-anim="fade-up">
+        <div class="bento-bg">
+          <img src="assets/mock_service_wash.png" alt="Pressure Washing" />
+        </div>
+        <div class="bento-content">
+          <h3>Pressure Washing</h3>
+          <p>Deep restorative cleaning designed for high-end materials, driveways, and fragile stone work.</p>
+        </div>
+        <div class="bento-overlay"></div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bento-card" data-anim="fade-up" data-delay="0.1">
+        <div class="bento-bg">
+          <img src="assets/mock_service_snow.png" alt="Snow Removal" />
+        </div>
+        <div class="bento-content">
+          <h3>Snow Removal</h3>
+          <p>Keep your property safe and accessible during winter with rapid, reliable snow plowing and clearing.</p>
+        </div>
+        <div class="bento-overlay"></div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bento-card" data-anim="fade-up" data-delay="0.2">
+        <div class="bento-bg">
+          <img src="assets/mock_service_detail.png" alt="Property Clean Up" />
+        </div>
+        <div class="bento-content">
+          <h3>Property Clean Up</h3>
+          <p>Comprehensive removal of debris, branches, and overgrowth to restore your landscape's pristine state.</p>
+        </div>
+        <div class="bento-overlay"></div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bento-card bento-wide" data-anim="fade-up" data-delay="0.1">
+        <div class="bento-bg">
+          <img src="assets/mock_service_truck.png" alt="Junk Removal" />
+        </div>
+        <div class="bento-content">
+          <h3>Junk Removal</h3>
+          <p>Efficient and responsible disposal of unwanted items, furniture, and heavy debris from any property.</p>
+        </div>
+        <div class="bento-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Fleet Section -->
+  <section class="fleet" data-anim="fade-up">
+    <div class="fleet-container">
+      <div class="fleet-text">
+        <span class="eyebrow">Equipment & Capability</span>
+        <h2 class="serif-title">Heavy Duty. Cinematic Finish.</h2>
+        <p>Our custom fleet is engineered to handle any volume of junk removal or extreme snow plowing. We bring the right machinery to ensure speed, efficiency, and zero damage to your property.</p>
+      </div>
+      <div class="fleet-images">
+        <img src="assets/mock_service_truck.png" alt="Junk Removal Truck" class="fleet-img" />
+        <img src="assets/mock_service_snow.png" alt="Snow Plowing Truck" class="fleet-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before/After -->
+  <section class="transformation" data-anim="fade-up">
+    <div class="transformation-container">
+      <h2 class="section-title">The Proof Is In The Contrast.</h2>
+      
+      <div class="sliders-grid">
+        <!-- Slider 1 -->
+        <div class="before-after">
+          <img src="assets/shed_before.png" alt="Before junk removal" />
+          <div class="after">
+            <img src="assets/shed_after.png" alt="After junk removal" />
+          </div>
+          <div class="divider"></div>
+        </div>
+
+        <!-- Slider 2 -->
+        <div class="before-after">
+          <img src="assets/garage_before.jpg" alt="Before property cleanup" />
+          <div class="after">
+            <img src="assets/garage_after.jpg" alt="After property cleanup" />
+          </div>
+          <div class="divider"></div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact" data-anim="fade-up">
+    <div class="contact-box">
+      <h2>Ready to Elevate Your Space?</h2>
+      <p>Consult with our lead artists today for a custom estimate.</p>
+      <a href="mailto:info@gallettabros.com" class="primary-button dark-button">Request a Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Galletta Bros.</h3>
+        <p>Premium Builders & Maintainers</p>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 Galletta Bros. All exclusivity rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Parallax Hero
+      gsap.to(".hero-bg-wrapper", {
+        yPercent: 30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+
+      // Title Stagger Animation
+      gsap.from(".hero-title span", {
+        y: 100,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "power4.out",
+        delay: 0.2
+      });
+
+      // General Fade Up Animation
+      gsap.utils.toArray('[data-anim="fade-up"]').forEach(elem => {
+        const delay = elem.getAttribute('data-delay') || 0;
+        gsap.from(elem, {
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          delay: parseFloat(delay),
+          scrollTrigger: {
+            trigger: elem,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          }
+        });
+      });
+
+      // Navbar drop down
+      gsap.from(".navbar", {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      });
+      
+      // Marquee Scroll Integration
+      gsap.to(".marquee-content", {
+        xPercent: -20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".marquee-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    });
+  </script>
+</body>
+</html>
