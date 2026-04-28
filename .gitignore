@@ -1,0 +1,16 @@
+# Brainstorming / planning scratch (kept out of git; specs and plans are tracked under docs/)
+.superpowers/
+
+# macOS metadata
+.DS_Store
+Icon?
+**/Icon?
+._*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
