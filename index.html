@@ -291,7 +291,78 @@
         </div>
       </div>
     </section>
+
+    <section class="quote" id="quote">
+      <div class="container quote__grid">
+        <div class="quote__pitch">
+          <span class="eyebrow eyebrow--dark">08 · Get a Free Quote</span>
+          <h2 class="display quote__title">Got Something to Haul?</h2>
+          <p class="quote__intro">Call us. We usually pick up. Or fill this out and we'll get back to you, same day.</p>
+          <a class="quote__phone" href="tel:+12032520250">203-252-0250</a>
+          <p class="quote__hours">Mon &ndash; Sun &middot; 7am to 6pm</p>
+        </div>
+
+        <form class="quote__form" action="mailto:info@gallettabros.com" method="post" enctype="text/plain">
+          <label class="quote__field">
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+          <label class="quote__field">
+            <span>Phone</span>
+            <input type="tel" name="phone" required autocomplete="tel" pattern="[0-9 \-\+\(\)]+" />
+          </label>
+          <label class="quote__field quote__field--full">
+            <span>What needs to go?</span>
+            <textarea name="details" rows="4" required></textarea>
+          </label>
+          <label class="quote__field quote__field--full">
+            <span>Photo (optional)</span>
+            <input type="file" name="photo" accept="image/*" />
+          </label>
+          <button type="submit" class="btn btn--primary btn--lg quote__submit">Send It</button>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <h3 class="display">Galletta Bros</h3>
+        <p>Family-run hauling, since the neighborhood needed us.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li>Junk Removal</li>
+          <li>Pressure Washing</li>
+          <li>Snow Removal</li>
+          <li>Moving</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Areas</h4>
+        <ul>
+          <li>Old Greenwich</li>
+          <li>Greenwich</li>
+          <li>Riverside</li>
+          <li>Stamford</li>
+          <li>Darien</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+12032520250">203-252-0250</a></li>
+          <li>Mon &ndash; Sun &middot; 7am to 6pm</li>
+          <li><a href="https://www.yelp.com/biz/galletta-bros-hauling-old-greenwich" target="_blank" rel="noopener">Yelp <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal container">
+      <span>&copy; 2026 Galletta Bros Hauling &middot; Old Greenwich, CT</span>
+    </div>
+  </footer>
 
   <a href="tel:+12032520250" class="call-bar" aria-label="Call Galletta Bros now">
     <span class="call-bar__label">Tap to Call</span>
