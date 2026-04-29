@@ -39,7 +39,7 @@
   <main id="main">
     <section class="hero" id="hero">
       <div class="hero__media" aria-hidden="true">
-        <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="assets/garage_after.jpg">
+        <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="assets/before-after/garage/after.jpg">
           <source src="assets/hero.mp4" type="video/mp4" />
         </video>
         <div class="hero__fallback">
@@ -121,6 +121,33 @@
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">03 · The Work</span>
+          <h2 class="display">Before. After. Proof.</h2>
+        </header>
+
+        <div class="ba-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Loading">
+          <img data-before-img src="" alt="Before" />
+          <div class="ba-slider__after" data-after>
+            <img data-after-img src="" alt="After" />
+          </div>
+          <div class="ba-slider__handle" data-handle></div>
+          <span class="ba-slider__label ba-slider__label--before">BEFORE</span>
+          <span class="ba-slider__label ba-slider__label--after">AFTER</span>
+        </div>
+
+        <ul class="work__thumbs" data-work-thumbs aria-label="Pick a transformation"></ul>
+
+        <p class="work__hint">Drag to reveal. Use arrow keys when focused.</p>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track" data-marquee-track></div>
       </div>
     </section>
   </main>

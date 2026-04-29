@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "garage",
+    "label": "Garage clearout",
+    "before": "assets/before-after/garage/before.jpg",
+    "after": "assets/before-after/garage/after.jpg"
+  },
+  {
+    "slug": "shed",
+    "label": "Shed removal",
+    "before": "assets/before-after/shed/before.png",
+    "after": "assets/before-after/shed/after.png"
+  }
+]

@@ -18,9 +18,9 @@
     <p>Drag the yellow handle. Click anywhere on the slider. Tab in, then use Arrow keys (5%), Home (0%), End (100%).</p>
 
     <div class="ba-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Test image, before and after">
-      <img data-before-img src="../assets/garage_before.jpg" alt="Before garage cleanout" />
+      <img data-before-img src="../assets/before-after/garage/before.jpg" alt="Before garage cleanout" />
       <div class="ba-slider__after" data-after>
-        <img data-after-img src="../assets/garage_after.jpg" alt="After garage cleanout" />
+        <img data-after-img src="../assets/before-after/garage/after.jpg" alt="After garage cleanout" />
       </div>
       <div class="ba-slider__handle" data-handle></div>
       <span class="ba-slider__label ba-slider__label--before">BEFORE</span>
@@ -46,7 +46,7 @@
       console.assert(root.getAttribute('aria-valuenow') === '0', 'Negative clamp should be 0');
       slider._set(50);
       console.assert(slider.value === 50, 'Value should round-trip back to 50');
-      slider.setImages({ before: '../assets/shed_before.png', after: '../assets/shed_after.png', label: 'Shed' });
+      slider.setImages({ before: '../assets/before-after/shed/before.png', after: '../assets/before-after/shed/after.png', label: 'Shed' });
       console.assert(root.getAttribute('aria-label') === 'Shed, before and after', 'aria-label should update from setImages');
       console.log('%c✓ slider assertions passed', 'color:#f5c518;font-weight:700');
     });

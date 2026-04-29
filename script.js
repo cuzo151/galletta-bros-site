@@ -6,6 +6,7 @@ const GB = {
       gsap.registerPlugin(ScrollTrigger);
     }
     GB.detectHeroVideo();
+    GB.initWork();
   },
 
   detectHeroVideo() {
@@ -17,6 +18,76 @@ const GB = {
     video.addEventListener('error', fail);
     video.addEventListener('stalled', fail);
     setTimeout(() => { if (video.readyState < 2) fail(); }, 2500);
+  },
+
+  async initWork() {
+    const root = document.querySelector('.work');
+    const sliderEl = root && root.querySelector('.ba-slider');
+    const thumbsEl = root && root.querySelector('[data-work-thumbs]');
+    const marqueeTrack = root && root.querySelector('[data-marquee-track]');
+    if (!sliderEl || !thumbsEl) return;
+
+    let pairs = [];
+    try {
+      const res = await fetch('assets/before-after/pairs.json', { cache: 'no-cache' });
+      pairs = await res.json();
+    } catch (e) {
+      console.warn('[work] failed to load pairs.json', e);
+      return;
+    }
+    if (!pairs.length) return;
+
+    const slider = new BeforeAfterSlider(sliderEl);
+    let activeIndex = 0;
+    let autoTimer = null;
+    let userInteracted = false;
+
+    const setActive = (i, fromUser) => {
+      activeIndex = (i + pairs.length) % pairs.length;
+      const p = pairs[activeIndex];
+      slider.setImages(p);
+      [...thumbsEl.querySelectorAll('.work__thumb')].forEach((el, idx) => {
+        el.setAttribute('aria-current', String(idx === activeIndex));
+      });
+      if (fromUser) {
+        userInteracted = true;
+        clearInterval(autoTimer);
+      }
+    };
+
+    // Build thumbs
+    pairs.forEach((p, i) => {
+      const li = document.createElement('li');
+      const btn = document.createElement('button');
+      btn.className = 'work__thumb';
+      btn.type = 'button';
+      btn.innerHTML = '<span class="work__thumb-dot" aria-hidden="true"></span>' + p.label;
+      btn.addEventListener('click', () => setActive(i, true));
+      li.appendChild(btn);
+      thumbsEl.appendChild(li);
+    });
+
+    // Build marquee (each pair duplicated for seamless loop)
+    if (marqueeTrack) {
+      const html = pairs.concat(pairs).map((p) => (
+        '<div class="marquee__pair">' +
+          '<img src="' + p.before + '" alt="" loading="lazy" />' +
+          '<img src="' + p.after  + '" alt="" loading="lazy" />' +
+        '</div>'
+      )).join('');
+      marqueeTrack.innerHTML = html;
+    }
+
+    // Pointer drag on the slider counts as "user interacted" - stop auto-advance
+    sliderEl.addEventListener('pointerdown', () => {
+      userInteracted = true;
+      clearInterval(autoTimer);
+    });
+
+    setActive(0, false);
+    autoTimer = setInterval(() => {
+      if (!userInteracted) setActive(activeIndex + 1, false);
+    }, 8000);
   }
 };
 
