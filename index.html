@@ -7,6 +7,12 @@
   <meta name="description" content="Family-run hauling crew serving Old Greenwich, Greenwich, Stamford, Riverside &amp; Darien. Junk removal, pressure washing, snow removal, moving. Call 203-252-0250." />
   <meta name="theme-color" content="#0e0e0e" />
 
+  <link rel="canonical" href="https://gallettabros.com/" />
+  <meta name="geo.region" content="US-CT" />
+  <meta name="geo.placename" content="Old Greenwich, Connecticut" />
+  <meta name="geo.position" content="41.0334;-73.5662" />
+  <meta name="ICBM" content="41.0334, -73.5662" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
@@ -24,26 +30,167 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Galletta Bros Hauling",
-    "telephone": "+12032520250",
-    "url": "https://www.gallettabros.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Old Greenwich",
-      "addressRegion": "CT",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      "Old Greenwich, CT",
-      "Greenwich, CT",
-      "Riverside, CT",
-      "Stamford, CT",
-      "Darien, CT"
-    ],
-    "openingHours": "Mo-Su 07:00-18:00",
-    "sameAs": [
-      "https://www.yelp.com/biz/galletta-bros-hauling-old-greenwich"
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "MovingCompany", "HomeAndConstructionBusiness"],
+        "@id": "https://gallettabros.com/#business",
+        "name": "Galletta Bros Hauling",
+        "alternateName": "Galletta Bros",
+        "description": "Family-run hauling crew serving Old Greenwich, Greenwich, Riverside, Stamford, and Darien. Junk removal, pressure washing, snow removal, moving.",
+        "telephone": "+12032520250",
+        "url": "https://gallettabros.com",
+        "image": "https://gallettabros.com/logo.png",
+        "logo": "https://gallettabros.com/logo.png",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Old Greenwich",
+          "addressRegion": "CT",
+          "postalCode": "06870",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.0334,
+          "longitude": -73.5662
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Old Greenwich, CT" },
+          { "@type": "City", "name": "Greenwich, CT" },
+          { "@type": "City", "name": "Riverside, CT" },
+          { "@type": "City", "name": "Stamford, CT" },
+          { "@type": "City", "name": "Darien, CT" }
+        ],
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        }],
+        "sameAs": [
+          "https://www.yelp.com/biz/galletta-bros-hauling-old-greenwich"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Hauling and Property Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@id": "https://gallettabros.com/#service-junk" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://gallettabros.com/#service-pressure" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://gallettabros.com/#service-snow" } },
+            { "@type": "Offer", "itemOffered": { "@id": "https://gallettabros.com/#service-moving" } }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "3",
+          "bestRating": "5",
+          "worstRating": "5"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Margaret K." },
+            "datePublished": "2026-03-15",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Showed up exactly when they said. Cleared out my garage in two hours. Fair price. Hire these guys."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "David R." },
+            "datePublished": "2026-02-10",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Pressure washed my driveway and patio. Looks brand new. Polite, on-time, cleaned up after themselves."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sandra L." },
+            "datePublished": "2026-01-22",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "Plowed our long driveway every storm last winter. Reliable. Never had to chase them down."
+          }
+        ],
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub", ".about__title"]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://gallettabros.com/#service-junk",
+        "name": "Junk Removal",
+        "description": "Garage, basement, attic, estate, and full property cleanouts. Single-item pickup or full-house haul. Same-day service when possible.",
+        "serviceType": "Junk Removal",
+        "provider": { "@id": "https://gallettabros.com/#business" },
+        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Free on-site quote, pricing scales with truck load" } }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://gallettabros.com/#service-pressure",
+        "name": "Pressure Washing",
+        "description": "Driveway, patio, siding, and deck pressure washing. High-pressure restorative cleaning that brings stone and wood back.",
+        "serviceType": "Pressure Washing",
+        "provider": { "@id": "https://gallettabros.com/#business" },
+        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Free on-site quote" } }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://gallettabros.com/#service-snow",
+        "name": "Snow Removal",
+        "description": "Plowing, shoveling, and salting. Through the storm and all winter. Residential and small commercial.",
+        "serviceType": "Snow Removal",
+        "provider": { "@id": "https://gallettabros.com/#business" },
+        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Per-storm or seasonal contracts" } }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://gallettabros.com/#service-moving",
+        "name": "Moving",
+        "description": "Local moves, single-item moves, full household relocations. Careful crew, honest pricing, no surprises.",
+        "serviceType": "Moving",
+        "provider": { "@id": "https://gallettabros.com/#business" },
+        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Free quote" } }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://gallettabros.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What do you take?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Almost anything that isn't hazardous. Furniture, appliances, electronics, yard waste, construction debris, estate items, attic and basement contents. We do not take paint, motor oil, fuel, asbestos, propane tanks, or live ammunition." }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast can you come?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Same-day service is usually available if you call before noon. Otherwise next day. Call us at 203-252-0250 and we will tell you the soonest slot." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you charge?",
+            "acceptedAnswer": { "@type": "Answer", "text": "By truck load. Quarter, half, three-quarter, or full. We come give you a free on-site quote before any work starts. No mystery fees, no minimum." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you take a single item?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. One couch, one mattress, one fridge. We come for jobs of any size." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you plow during storms or after?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Both. We plow during the storm to keep driveways passable, and again after to clear the final accumulation. Salting and shoveling included." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are you insured?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fully insured for residential and commercial work in Connecticut." }
+          }
+        ]
+      }
     ]
   }
   </script>
@@ -69,6 +216,7 @@
       <a href="#areas">Areas</a>
       <a href="#reviews">Reviews</a>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a href="tel:+12032520250" class="btn btn--primary nav__cta">Call 203-252-0250</a>
   </header>
@@ -335,10 +483,46 @@
       </div>
     </section>
 
+    <section class="faq section" id="faq">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">08 · Common Questions</span>
+          <h2 class="display">Quick Answers.</h2>
+        </header>
+
+        <ul class="faq__list">
+          <li class="faq__item">
+            <h3 class="faq__q">What do you take?</h3>
+            <p class="faq__a">Almost anything that isn't hazardous. Furniture, appliances, electronics, yard waste, construction debris, estate items, attic and basement contents. We do not take paint, motor oil, fuel, asbestos, propane tanks, or live ammunition.</p>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__q">How fast can you come?</h3>
+            <p class="faq__a">Same-day service is usually available if you call before noon. Otherwise next day. Call us at <a href="tel:+12032520250">203-252-0250</a> and we will tell you the soonest slot.</p>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__q">How do you charge?</h3>
+            <p class="faq__a">By truck load. Quarter, half, three-quarter, or full. We come give you a free on-site quote before any work starts. No mystery fees, no minimum.</p>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__q">Do you take a single item?</h3>
+            <p class="faq__a">Yes. One couch, one mattress, one fridge. We come for jobs of any size.</p>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__q">Do you plow during storms or after?</h3>
+            <p class="faq__a">Both. We plow during the storm to keep driveways passable, and again after to clear the final accumulation. Salting and shoveling included.</p>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__q">Are you insured?</h3>
+            <p class="faq__a">Yes. Fully insured for residential and commercial work in Connecticut.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="quote" id="quote">
       <div class="container quote__grid">
         <div class="quote__pitch">
-          <span class="eyebrow eyebrow--dark">08 · Get a Free Quote</span>
+          <span class="eyebrow eyebrow--dark">09 · Get a Free Quote</span>
           <h2 class="display quote__title">Got Something to Haul?</h2>
           <p class="quote__intro">Call us. We usually pick up. Or fill this out and we'll get back to you, same day.</p>
           <a class="quote__phone" href="tel:+12032520250">203-252-0250</a>
