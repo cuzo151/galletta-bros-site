@@ -74,6 +74,8 @@ galletta-bros-website/
 - Approval on the 3 Yelp quotes (`<section class="reviews">` in `index.html`) before launch.
 - Confirmation that Moving is offered (or remove the fourth service card).
 - Decision on the email destination for the Free Quote form (currently `mailto:info@gallettabros.com`).
+- Final domain (currently `gallettabros.com` placeholder in the LocalBusiness JSON-LD and Open Graph tags).
+- Open Graph share image (`logo.png` is the placeholder; a 1200×630 social card would be better).
 
 ## Slider test harness
 

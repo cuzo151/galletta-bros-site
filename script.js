@@ -32,15 +32,21 @@ const GB = {
     const marqueeTrack = root && root.querySelector('[data-marquee-track]');
     if (!sliderEl || !thumbsEl) return;
 
+    // Hardcoded baseline pair so the section never goes blank if pairs.json fails to load.
+    const FALLBACK_PAIRS = [{
+      slug: 'garage',
+      label: 'Garage clearout',
+      before: 'assets/before-after/garage/before.jpg',
+      after: 'assets/before-after/garage/after.jpg'
+    }];
     let pairs = [];
     try {
       const res = await fetch('assets/before-after/pairs.json', { cache: 'no-cache' });
-      pairs = await res.json();
+      if (res.ok) pairs = await res.json();
     } catch (e) {
-      console.warn('[work] failed to load pairs.json', e);
-      return;
+      console.warn('[work] failed to load pairs.json, using fallback', e);
     }
-    if (!pairs.length) return;
+    if (!Array.isArray(pairs) || !pairs.length) pairs = FALLBACK_PAIRS;
 
     const slider = new BeforeAfterSlider(sliderEl);
     let activeIndex = 0;

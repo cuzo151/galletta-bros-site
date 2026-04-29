@@ -321,12 +321,6 @@ section { padding: var(--section-y) 0; }
   color: var(--safety-yellow);
 }
 
-/* Hide [data-anim] elements before the GSAP scroll-anim init in Task 12 attaches.
-   Once Task 12 lands, this rule will be overridden by the existing
-   "@media (prefers-reduced-motion: no-preference) { [data-anim] { opacity: 1; } }" rule.
-   For now, give them a starting state that matches the eventual fade-up so first paint isn't jumpy. */
-[data-anim] { opacity: 1; } /* visible by default until Task 12's GSAP overrides */
-
 @media (max-width: 1024px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
   .service--featured { grid-column: span 2; grid-row: auto; }
@@ -411,7 +405,7 @@ section { padding: var(--section-y) 0; }
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.18em;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(14, 14, 14, 0.65); /* warm-tinted asphalt at 65% */
   color: var(--safety-yellow);
   z-index: 4;
   pointer-events: none;
