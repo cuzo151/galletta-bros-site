@@ -747,7 +747,7 @@ section { padding: var(--section-y) 0; }
   .reviews__nav { width: 36px; height: 36px; }
 }
 
-/* ===== ABOUT (BROTHERS) — scroll-driven canvas frame sequence ===== */
+/* ===== ABOUT (BROTHERS) - scroll-driven canvas frame sequence ===== */
 /* Per cinematic-sites skill: 200vh section + 100vh sticky inner + canvas scrub.
    Canvas draws JPEG frames via gsap.to + snap, never <video>.currentTime. */
 .about {
