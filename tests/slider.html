@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slider Test Harness</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .harness { padding: 2rem; max-width: 1100px; margin: 0 auto; }
+    .harness h1 { color: var(--text-primary); font-family: var(--font-display); margin-bottom: 0.5rem; }
+    .harness p { color: var(--text-body); margin-bottom: 1.5rem; }
+    .harness .log { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="harness">
+    <h1 class="display">Slider Test</h1>
+    <p>Drag the yellow handle. Click anywhere on the slider. Tab in, then use Arrow keys (5%), Home (0%), End (100%).</p>
+
+    <div class="ba-slider" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Test image, before and after">
+      <img data-before-img src="../assets/garage_before.jpg" alt="Before garage cleanout" />
+      <div class="ba-slider__after" data-after>
+        <img data-after-img src="../assets/garage_after.jpg" alt="After garage cleanout" />
+      </div>
+      <div class="ba-slider__handle" data-handle></div>
+      <span class="ba-slider__label ba-slider__label--before">BEFORE</span>
+      <span class="ba-slider__label ba-slider__label--after">AFTER</span>
+    </div>
+
+    <p class="log">Console assertions run on load. Open DevTools.</p>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const root = document.querySelector('.ba-slider');
+      const slider = new BeforeAfterSlider(root);
+
+      // Assertions
+      console.assert(root.getAttribute('aria-valuenow') === '50', 'Initial value should be 50');
+      slider._set(0);
+      console.assert(root.getAttribute('aria-valuenow') === '0', 'Min clamp should be 0');
+      slider._set(150);
+      console.assert(root.getAttribute('aria-valuenow') === '100', 'Max clamp should be 100');
+      slider._set(-50);
+      console.assert(root.getAttribute('aria-valuenow') === '0', 'Negative clamp should be 0');
+      slider._set(50);
+      console.assert(slider.value === 50, 'Value should round-trip back to 50');
+      slider.setImages({ before: '../assets/shed_before.png', after: '../assets/shed_after.png', label: 'Shed' });
+      console.assert(root.getAttribute('aria-label') === 'Shed, before and after', 'aria-label should update from setImages');
+      console.log('%c✓ slider assertions passed', 'color:#f5c518;font-weight:700');
+    });
+  </script>
+</body>
+</html>
