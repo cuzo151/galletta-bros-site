@@ -171,6 +171,7 @@ section { padding: var(--section-y) 0; }
   transform: translateX(-50%);
   animation: chev 2.4s ease-in-out infinite;
 }
+.hero__chevron:focus-visible { outline: 2px solid var(--safety-yellow); outline-offset: 4px; border-radius: 2px; }
 @keyframes chev {
   0%,100% { transform: translateX(-50%) translateY(0); }
   50%     { transform: translateX(-50%) translateY(8px); }
@@ -198,9 +199,9 @@ section { padding: var(--section-y) 0; }
   position: absolute;
   bottom: 18%;
   left: 0;
-  width: 320px;
-  height: 110px;
-  background: linear-gradient(180deg, #2a2a2a 60%, #1a1a1a 60%);
+  width: clamp(180px, 35vw, 320px);
+  height: clamp(60px, 12vw, 110px);
+  background: linear-gradient(180deg, var(--steel-line) 60%, var(--steel) 60%);
   clip-path: polygon(0 100%, 0 40%, 30% 40%, 35% 0, 70% 0, 75% 40%, 100% 40%, 100% 100%);
   transform: translateX(-120%);
   animation: htruck 3.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
@@ -227,4 +228,9 @@ section { padding: var(--section-y) 0; }
 @media (max-width: 700px) {
   .hero { min-height: 88vh; }
   .hero__ctas .btn { flex: 1 1 100%; justify-content: center; }
+}
+
+/* Reduced-motion override: keep the brand bar visible at the left edge instead of wiping off-screen */
+@media (prefers-reduced-motion: reduce) {
+  .hero__fallback-bar { transform: translateX(0) !important; }
 }

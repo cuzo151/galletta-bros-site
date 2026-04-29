@@ -1,4 +1,4 @@
-// Galletta Bros — entrypoint
+// Galletta Bros entrypoint
 // Each section module registers via init functions called at the bottom.
 const GB = {
   init() {
@@ -13,11 +13,10 @@ const GB = {
     const video = hero && hero.querySelector('.hero__video');
     if (!hero || !video) return;
     const fail = () => hero.setAttribute('data-no-video', '');
+    if (video.error) { fail(); return; }
     video.addEventListener('error', fail);
-    // If no playable source loads within 2.5s, fall back so the page is never blank.
-    setTimeout(() => {
-      if (video.readyState < 2) fail();
-    }, 2500);
+    video.addEventListener('stalled', fail);
+    setTimeout(() => { if (video.readyState < 2) fail(); }, 2500);
   }
 };
 
