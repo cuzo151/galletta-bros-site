@@ -7,6 +7,8 @@ const GB = {
     } else {
       // GSAP failed to load - show all [data-anim] elements so the page isn't blank.
       document.querySelectorAll('[data-anim]').forEach((el) => { el.style.opacity = '1'; });
+      // The about media uses clip-path for its scroll reveal; reset it too if GSAP is missing.
+      document.querySelectorAll('.about__media').forEach((el) => { el.style.clipPath = 'inset(0 0 0 0)'; });
     }
     GB.detectHeroVideo();
     GB.initWork();
@@ -193,6 +195,24 @@ const GB = {
           toggleActions: 'play none none none'
         }
       });
+    }
+
+    // Brothers video: scrubbed clip-path reveal that rises up as the user scrolls into the section.
+    const aboutMedia = document.querySelector('.about__media');
+    if (aboutMedia) {
+      gsap.fromTo(aboutMedia,
+        { clipPath: 'inset(100% 0 0 0)' },
+        {
+          clipPath: 'inset(0% 0 0 0)',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.about',
+            start: 'top 85%',
+            end: 'top 35%',
+            scrub: 0.5
+          }
+        }
+      );
     }
   }
 };
