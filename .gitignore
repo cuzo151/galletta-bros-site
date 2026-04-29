@@ -14,3 +14,6 @@ Icon?
 
 # OS
 Thumbs.db
+
+# Derived assets — extracted via ffmpeg from source MP4s. Keep MP4s in repo, regenerate frames as needed.
+assets/about-frames/

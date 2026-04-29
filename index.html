@@ -314,19 +314,23 @@
       </div>
     </section>
 
-    <section class="about section" id="about">
-      <div class="container about__grid">
-        <figure class="about__media" data-anim>
-          <video class="about__video" autoplay loop muted playsinline preload="metadata" poster="assets/gallery/crew-02.jpg" aria-label="The Galletta brothers at work">
-            <source src="assets/brothers.mp4" type="video/mp4" />
-          </video>
-        </figure>
-        <div class="about__text">
-          <span class="eyebrow">07 · Who We Are</span>
-          <h2 class="display about__title">Two Brothers.<br />One Truck.</h2>
-          <p>We started Galletta Bros to do honest work in the town we grew up in. We show up when we say we will, we work hard, and we leave it cleaner than we found it.</p>
-          <p>If you're calling Galletta Bros, you're calling family. Not a faceless company.</p>
-          <p class="about__meta">Family-owned · Old Greenwich, CT · Insured</p>
+    <section class="about" id="about">
+      <div class="about__sticky">
+        <div class="container about__grid">
+          <figure class="about__media" data-anim aria-label="The Galletta brothers at work">
+            <canvas id="aboutCanvas" class="about__canvas"></canvas>
+            <video class="about__video" autoplay loop muted playsinline preload="metadata" poster="assets/about-frames/frame-0001.jpg">
+              <source src="assets/brothers-flex.mp4" type="video/mp4" />
+            </video>
+            <span class="about__scroll-hint">Scroll to flex</span>
+          </figure>
+          <div class="about__text">
+            <span class="eyebrow">07 · Who We Are</span>
+            <h2 class="display about__title">Two Brothers.<br />One Truck.</h2>
+            <p>We started Galletta Bros to do honest work in the town we grew up in. We show up when we say we will, we work hard, and we leave it cleaner than we found it.</p>
+            <p>If you're calling Galletta Bros, you're calling family. Not a faceless company.</p>
+            <p class="about__meta">Family-owned · Old Greenwich, CT · Insured</p>
+          </div>
         </div>
       </div>
     </section>
