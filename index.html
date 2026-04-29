@@ -37,7 +37,36 @@
   </header>
 
   <main id="main">
-    <!-- Sections inserted in later tasks -->
+    <section class="hero" id="hero">
+      <div class="hero__media" aria-hidden="true">
+        <video class="hero__video" autoplay loop muted playsinline preload="auto" poster="assets/services/hauling.jpg">
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__fallback" aria-hidden="true">
+          <span class="hero__fallback-bar"></span>
+          <span class="hero__fallback-truck"></span>
+          <span class="hero__fallback-logo">GB</span>
+        </div>
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content container">
+        <span class="eyebrow">Old Greenwich · Mon–Sun · 7am to 6pm</span>
+        <h1 class="display hero__title">
+          Got Junk?<br />
+          We'll <span class="hero__title-accent">Haul It.</span>
+        </h1>
+        <p class="lead hero__sub">Family-run hauling crew covering Greenwich, Stamford, Riverside, and Darien. Junk removal, pressure washing, snow, moving. One call.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary btn--lg" href="tel:+12032520250">Call 203-252-0250</a>
+          <a class="btn btn--ghost btn--lg" href="#quote">Free Quote ↓</a>
+        </div>
+      </div>
+
+      <a href="#services" class="hero__chevron" aria-label="Scroll to services">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
+      </a>
+    </section>
   </main>
 
   <a href="tel:+12032520250" class="call-bar" aria-label="Call Galletta Bros now">
