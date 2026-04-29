@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" fill="#0e0e0e" rx="8"/>
+  <rect width="64" height="64" fill="#0f1830" rx="8"/>
   <text x="32" y="44"
         text-anchor="middle"
         font-family="'Anton', Impact, 'Arial Narrow Bold', sans-serif"
         font-weight="400"
         font-size="36"
         letter-spacing="0.04em"
-        fill="#f5c518">GB</text>
+        fill="#c93832">GB</text>
 </svg>

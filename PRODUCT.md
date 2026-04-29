@@ -54,8 +54,8 @@ The site is closer to: a Carhartt product page after dark, a BMX-shop one-pager,
 
 ## Aesthetic lane
 
-Rugged workwear meets short-form film. Reference touchstones:
-- The credits sequence of *Drive* (warm color, bold condensed type, pacing)
-- A Carhartt or Dickies product page
+Classic American mover meets short-form film. Reference touchstones:
+- The opening of an Allied Van Lines or U-Haul commercial done by a serious creative agency
+- A Stanley Steemer or 1-800-GOT-JUNK rebrand by a serious agency, but family-run
 - The opening of a Casey Neistat truck-haul vlog
-- Construction site safety signage at dusk
+- A red-and-navy parade banner on a small-town main street

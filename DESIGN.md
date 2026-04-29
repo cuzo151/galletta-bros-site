@@ -6,30 +6,36 @@ Visual system for the rugged-cinematic Galletta Bros marketing site. Authoritati
 
 Rugged workwear × short-form film. Reference physical objects: hand-painted signage on a dump truck, a Carhartt jacket label at dusk, sodium-vapor light on wet asphalt, a 1970s shop manual cover. The opposite of luxury polish or SaaS softness.
 
-## Color
+## Color (UPDATED 2026-04-29)
 
-**Strategy:** Restrained + Committed hybrid. Asphalt black dominates 75–80% of surface. Steel and bone provide 15% of secondary surface. Safety yellow is the single accent, used sparingly (≤ 8%) on CTAs, eyebrow rules, accent labels, the final-CTA band. Brick is reserved for emphasis at < 2% (one or two moments only — e.g. a "live" indicator, a special label).
+Per client direction, the palette pivoted from rugged-workwear-yellow to a classic American mover system: white + black + red, with navy and gray as supporting tones.
 
-**Tokens (in `style.css :root`):**
+**Strategy:** Restrained light-default body with one red accent (less than or equal to 8% surface), navy as the dark contrast surface for hero / quote / footer, gray as the supporting neutral for borders and secondary text.
 
-| Token | Hex | OKLCH (intent) | Role |
-|---|---|---|---|
-| `--asphalt` | `#0e0e0e` | `oklch(0.16 0.005 60)` warm-tinted near-black | Primary background |
-| `--steel` | `#1a1a1a` | `oklch(0.21 0.005 60)` | Secondary surface |
-| `--steel-line` | `#2a2a2a` | `oklch(0.30 0.005 60)` | Borders, dividers |
-| `--safety-yellow` | `#f5c518` | `oklch(0.83 0.16 95)` | Accent, primary CTA |
-| `--safety-yellow-hot` | `#ffd633` | `oklch(0.88 0.16 95)` | Accent hover |
-| `--bone` | `#f5f1e8` | `oklch(0.94 0.012 90)` warm off-white | Primary text on dark, light surfaces |
-| `--brick` | `#a0392a` | `oklch(0.50 0.16 28)` | Rare emphasis |
-| `--text-primary` | `#f5f1e8` | (= `--bone`) | Headlines on dark |
-| `--text-body` | `#cfc8b8` | `oklch(0.81 0.012 90)` warm-tinted body | Body copy on dark |
-| `--text-muted` | `#8a857a` | `oklch(0.59 0.012 90)` | Captions, timestamps |
+**Tokens:**
+
+| Token | Hex | Role |
+|---|---|---|
+| `--paper` | `#f9f7f3` | Primary page background, off-white warm-tinted |
+| `--paper-card` | `#f1eee7` | Light card / section-stripe background |
+| `--paper-line` | `#e0dcd2` | Borders, dividers on light surfaces |
+| `--ink` | `#1a1814` | Primary text, headlines |
+| `--ink-body` | `#5a564f` | Body copy gray |
+| `--ink-muted` | `#8a857a` | Captions, eyebrow numerals |
+| `--accent-red` | `#c93832` | Single accent, CTAs, highlights, headline accents, eyebrow rules |
+| `--accent-red-hot` | `#e2453d` | Accent hover |
+| `--ink-navy` | `#0f1830` | Dark surface for hero overlay, quote band |
+| `--ink-deep` | `#0a0908` | Deep warm-black for footer |
+| `--paper-on-dark` | `#f9f7f3` | Off-white text on dark surfaces |
+| `--paper-on-dark-body` | `#c8c2b6` | Body text on dark surfaces |
+
+The legacy token names (`--asphalt`, `--steel`, `--safety-yellow`, etc.) remain as aliases pointing at the new tokens for transitional compatibility.
 
 **Rules:**
-- Never `#000` or `#fff`. All neutrals tinted toward warm/yellow hue (chroma ~0.005–0.012).
-- Bone replaces `#fff` everywhere headline text appears.
-- Yellow is load-bearing: when it appears, it means *take action* or *this is the proof*. If yellow is decorative, remove it.
-- Brick is reserved for one or two purposeful moments per page maximum.
+- Never `#000` or `#fff`. All neutrals tinted slightly warm.
+- Red is load-bearing, appears only on actions, accents, and the accent word. Never decorative.
+- Navy is for dark contrast surfaces only (hero, quote, footer). Not used as a body color.
+- Hero is dark (navy overlay over video); the rest of the body is light.
 
 ## Typography
 
