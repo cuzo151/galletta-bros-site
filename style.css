@@ -497,6 +497,15 @@ section { padding: var(--section-y) 0; }
   height: 130px;
   object-fit: cover;
 }
+.marquee__cell {
+  flex: 0 0 auto;
+  width: 220px;
+}
+.marquee__cell img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
 @keyframes marq {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }

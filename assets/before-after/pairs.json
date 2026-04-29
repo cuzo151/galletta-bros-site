@@ -10,5 +10,29 @@
     "label": "Shed removal",
     "before": "assets/before-after/shed/before.png",
     "after": "assets/before-after/shed/after.png"
+  },
+  {
+    "slug": "job-1",
+    "label": "Property cleanout 1",
+    "before": "assets/before-after/job-1/before.jpg",
+    "after": "assets/before-after/job-1/after.jpg"
+  },
+  {
+    "slug": "job-2",
+    "label": "Property cleanout 2",
+    "before": "assets/before-after/job-2/before.jpg",
+    "after": "assets/before-after/job-2/after.jpg"
+  },
+  {
+    "slug": "job-3",
+    "label": "Property cleanout 3",
+    "before": "assets/before-after/job-3/before.jpg",
+    "after": "assets/before-after/job-3/after.jpg"
+  },
+  {
+    "slug": "job-4",
+    "label": "Property cleanout 4",
+    "before": "assets/before-after/job-4/before.jpg",
+    "after": "assets/before-after/job-4/after.jpg"
   }
 ]

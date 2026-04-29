@@ -78,12 +78,20 @@ const GB = {
       thumbsEl.appendChild(li);
     });
 
-    // Build marquee (each pair duplicated for seamless loop)
+    // Marquee: load gallery.json (single-image cells), fall back to pair befores if missing.
     if (marqueeTrack) {
-      const html = pairs.concat(pairs).map((p) => (
-        '<div class="marquee__pair">' +
-          '<img src="' + p.before + '" alt="" loading="lazy" />' +
-          '<img src="' + p.after  + '" alt="" loading="lazy" />' +
+      let gallery = [];
+      try {
+        const gres = await fetch('assets/gallery/gallery.json', { cache: 'no-cache' });
+        if (gres.ok) gallery = await gres.json();
+      } catch (e) { /* fall through */ }
+      if (!Array.isArray(gallery) || !gallery.length) {
+        gallery = pairs.flatMap((p) => [p.before, p.after]);
+      }
+      // Duplicate for seamless -50% translateX loop
+      const html = gallery.concat(gallery).map((src) => (
+        '<div class="marquee__cell">' +
+          '<img src="' + src + '" alt="" loading="lazy" />' +
         '</div>'
       )).join('');
       marqueeTrack.innerHTML = html;
