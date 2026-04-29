@@ -839,7 +839,7 @@ section { padding: var(--section-y) 0; }
   .about { min-height: auto; }
   .about__sticky { position: static; height: auto; }
   .about__grid { grid-template-columns: 1fr; height: auto; padding-block: clamp(3rem, 8vw, 5rem); }
-  .about__media { aspect-ratio: 3 / 2; min-height: auto; height: auto; }
+  .about__media { aspect-ratio: 1 / 1; min-height: auto; height: auto; max-height: 80vh; }
   .about__canvas { display: none; }
   .about__video { display: block; }
   .about__scroll-hint { display: none; }
@@ -847,7 +847,7 @@ section { padding: var(--section-y) 0; }
 @media (prefers-reduced-motion: reduce) {
   .about { min-height: auto; }
   .about__sticky { position: static; height: auto; }
-  .about__media { aspect-ratio: 3 / 2; min-height: auto; height: auto; }
+  .about__media { aspect-ratio: 1 / 1; min-height: auto; height: auto; max-height: 80vh; }
   .about__canvas { display: none; }
   .about__video { display: block; }
   .about__scroll-hint { display: none; }
