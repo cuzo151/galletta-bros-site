@@ -8,12 +8,12 @@
   --bone: #f5f1e8;
   --brick: #a0392a;
 
-  --text-primary: #ffffff;
-  --text-body: #d4d4d4;
-  --text-muted: #888888;
+  --text-primary: #f5f1e8;
+  --text-body: #cfc8b8;
+  --text-muted: #8a857a;
 
   --font-display: 'Anton', Impact, 'Arial Narrow Bold', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 
   --max-w: 1280px;
