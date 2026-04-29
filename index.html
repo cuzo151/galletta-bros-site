@@ -181,6 +181,60 @@
         </div>
       </div>
     </section>
+
+    <section class="areas section" id="areas">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">05 · Areas We Cover</span>
+          <h2 class="display">Fairfield County, Covered.</h2>
+        </header>
+
+        <div class="areas__grid">
+          <svg class="areas__map" viewBox="0 0 800 320" role="img" aria-label="Map of southern Fairfield County coast with five towns marked">
+            <!-- Land mass -->
+            <path d="M 20,40 Q 200,20 360,60 T 700,80 L 780,140 L 780,200 Q 600,210 400,240 T 80,260 Z" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+            <!-- Coastline accent -->
+            <path d="M 20,40 Q 200,20 360,60 T 700,80 L 780,140" fill="none" stroke="#f5c518" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5"/>
+
+            <!-- Pins (cx aligned to towns west to east) -->
+            <g class="areas__pin" transform="translate(140,150)">
+              <circle r="9" fill="#f5c518" />
+              <circle r="20" fill="none" stroke="#f5c518" stroke-width="1.5" opacity="0.5"/>
+              <text y="-22" text-anchor="middle" fill="#f5f1e8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">GREENWICH</text>
+            </g>
+            <g class="areas__pin" transform="translate(240,170)">
+              <circle r="9" fill="#f5c518" />
+              <circle r="20" fill="none" stroke="#f5c518" stroke-width="1.5" opacity="0.5"/>
+              <text y="-22" text-anchor="middle" fill="#f5f1e8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RIVERSIDE</text>
+            </g>
+            <g class="areas__pin areas__pin--hq" transform="translate(310,160)">
+              <circle r="11" fill="#f5c518" />
+              <circle r="24" fill="none" stroke="#f5c518" stroke-width="2" />
+              <text y="-26" text-anchor="middle" fill="#f5c518" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">OLD GREENWICH</text>
+            </g>
+            <g class="areas__pin" transform="translate(440,180)">
+              <circle r="9" fill="#f5c518" />
+              <circle r="20" fill="none" stroke="#f5c518" stroke-width="1.5" opacity="0.5"/>
+              <text y="-22" text-anchor="middle" fill="#f5f1e8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">STAMFORD</text>
+            </g>
+            <g class="areas__pin" transform="translate(580,170)">
+              <circle r="9" fill="#f5c518" />
+              <circle r="20" fill="none" stroke="#f5c518" stroke-width="1.5" opacity="0.5"/>
+              <text y="-22" text-anchor="middle" fill="#f5f1e8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">DARIEN</text>
+            </g>
+          </svg>
+
+          <ul class="areas__list">
+            <li><span class="areas__dot" aria-hidden="true"></span>Old Greenwich <span class="areas__hq">HQ</span></li>
+            <li><span class="areas__dot" aria-hidden="true"></span>Greenwich</li>
+            <li><span class="areas__dot" aria-hidden="true"></span>Riverside</li>
+            <li><span class="areas__dot" aria-hidden="true"></span>Stamford</li>
+            <li><span class="areas__dot" aria-hidden="true"></span>Darien</li>
+            <li class="areas__more">and surrounding Fairfield County</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <a href="tel:+12032520250" class="call-bar" aria-label="Call Galletta Bros now">
