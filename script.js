@@ -7,6 +7,7 @@ const GB = {
     }
     GB.detectHeroVideo();
     GB.initWork();
+    GB.initReviews();
   },
 
   detectHeroVideo() {
@@ -88,6 +89,34 @@ const GB = {
     autoTimer = setInterval(() => {
       if (!userInteracted) setActive(activeIndex + 1, false);
     }, 8000);
+  },
+
+  initReviews() {
+    const root = document.querySelector('[data-reviews]');
+    if (!root) return;
+    const items = [...root.querySelectorAll('.review')];
+    if (!items.length) return;
+    const prevBtn = root.querySelector('[data-prev]');
+    const nextBtn = root.querySelector('[data-next]');
+    let i = items.findIndex((el) => el.hasAttribute('data-active'));
+    if (i < 0) i = 0;
+    let timer = null;
+
+    const show = (next) => {
+      items[i].removeAttribute('data-active');
+      i = (next + items.length) % items.length;
+      items[i].setAttribute('data-active', '');
+    };
+
+    const restart = () => {
+      clearInterval(timer);
+      timer = setInterval(() => show(i + 1), 6000);
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { show(i - 1); restart(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { show(i + 1); restart(); });
+
+    restart();
   }
 };
 
