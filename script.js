@@ -4,10 +4,14 @@ const GB = {
   init() {
     if (window.gsap && window.ScrollTrigger) {
       gsap.registerPlugin(ScrollTrigger);
+    } else {
+      // GSAP failed to load - show all [data-anim] elements so the page isn't blank.
+      document.querySelectorAll('[data-anim]').forEach((el) => { el.style.opacity = '1'; });
     }
     GB.detectHeroVideo();
     GB.initWork();
     GB.initReviews();
+    GB.initAnimations();
   },
 
   detectHeroVideo() {
@@ -117,6 +121,65 @@ const GB = {
     if (nextBtn) nextBtn.addEventListener('click', () => { show(i + 1); restart(); });
 
     restart();
+  },
+
+  initAnimations() {
+    if (!window.gsap) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      // Make sure any [data-anim] starts visible - no entrance, but no missing content.
+      document.querySelectorAll('[data-anim]').forEach((el) => { el.style.opacity = '1'; });
+      return;
+    }
+
+    // Generic fade-up for every [data-anim] element.
+    gsap.utils.toArray('[data-anim]').forEach((el) => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 32 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'expo.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
+
+    // Hero parallax: media nudges down as the hero scrolls out.
+    if (document.querySelector('.hero__media')) {
+      gsap.to('.hero__media', {
+        yPercent: 10,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+    }
+
+    // Service-area pin drop: each pin enters from above on scroll-in.
+    const pins = gsap.utils.toArray('.areas__pin');
+    if (pins.length) {
+      gsap.from(pins, {
+        y: -24,
+        opacity: 0,
+        duration: 0.55,
+        ease: 'expo.out',
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: '.areas',
+          start: 'top 70%',
+          toggleActions: 'play none none none'
+        }
+      });
+    }
   }
 };
 

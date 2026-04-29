@@ -933,3 +933,32 @@ section { padding: var(--section-y) 0; }
 @media (max-width: 480px) {
   .footer__grid { grid-template-columns: 1fr; }
 }
+
+/* ===== A11Y / FOCUS / DEFAULTS ===== */
+
+/* All scroll-animated elements start hidden; GSAP shows them. With JS off, the no-preference media query keeps them visible. */
+[data-anim] { opacity: 0; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { [data-anim] { opacity: 1; } }
+
+/* When JS doesn't load (gsap missing), make sure content still appears. The body gets a class once JS runs; no class -> fall back to visible. */
+.no-js [data-anim] { opacity: 1; }
+
+/* Global keyboard focus ring (extends the per-component focus rules already in place). */
+:focus-visible {
+  outline: 2px solid var(--safety-yellow);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+/* Suppress double-rings where a component already styles its own focus state. */
+.ba-slider:focus-visible,
+.reviews__nav:focus-visible,
+.quote__field input:focus-visible,
+.quote__field textarea:focus-visible { outline-offset: 2px; }
+
+/* Backdrop-filter fallback: when not supported, use a more opaque nav background so video pixels don't bleed through. */
+@supports not ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
+  .nav { background: rgba(14, 14, 14, 0.96); }
+}
+
+/* Text underline rendering for service headings - ensure underline survives Safari quirks. */
+.service__name { text-decoration-line: underline; }
