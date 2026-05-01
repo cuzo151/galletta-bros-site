@@ -12,6 +12,7 @@ const GB = {
     GB.initWork();
     GB.initReviews();
     GB.initAnimations();
+    GB.initPressureCanvas();
   },
 
   detectHeroVideo() {

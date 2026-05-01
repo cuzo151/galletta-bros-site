@@ -1125,18 +1125,18 @@ section { padding: var(--section-y) 0; }
   .intro__copy { max-width: none; text-align: center; }
 }
 
-/* ===== FOUNDERS SHOWCASE (scroll-driven cinematic moment) ===== */
+/* ===== PRESSURE WASHING SHOWCASE (scroll-driven canvas frame sequence) ===== */
 /* Same pattern as cinematic-sites canvas frames: 200vh outer + 100vh sticky inner.
    Vertical phone video framed in a 9:16 panel; text on the right scrolls past while
    the canvas scrubs frame-by-frame. */
-.founders {
+.pressure {
   background: var(--paper);
   min-height: 200vh;
   padding: 0;
   position: relative;
   border-block: 1px solid var(--paper-line);
 }
-.founders__sticky {
+.pressure__sticky {
   position: sticky;
   top: 0;
   height: 100vh;
@@ -1144,7 +1144,7 @@ section { padding: var(--section-y) 0; }
   display: flex;
   align-items: center;
 }
-.founders__row {
+.pressure__row {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: clamp(2rem, 6vw, 5rem);
@@ -1155,7 +1155,7 @@ section { padding: var(--section-y) 0; }
 }
 
 /* The phone-shaped frame holding the canvas / video */
-.founders__phone {
+.pressure__phone {
   position: relative;
   width: clamp(220px, 30vw, 380px);
   aspect-ratio: 9 / 16;
@@ -1167,50 +1167,76 @@ section { padding: var(--section-y) 0; }
     0 30px 60px -20px rgba(15, 24, 48, 0.35),
     0 8px 20px -8px rgba(15, 24, 48, 0.25);
 }
-.founders__photo {
-  position: absolute; inset: 0;
+.pressure__canvas {
+  position: absolute; inset: 0; display: block;
+  width: 100%; height: 100%;
+}
+/* Mobile fallback: hide canvas, show looping video */
+.pressure__video {
+  display: none;
   width: 100%; height: 100%;
   object-fit: cover;
-  display: block;
-  transition: transform 12s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.founders__phone:hover .founders__photo { transform: scale(1.06); }
+.pressure__hint {
+  position: absolute;
+  bottom: 1rem; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 24, 48, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-on-dark);
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 2;
+  pointer-events: none;
+}
 
-.founders__copy {
+.pressure__copy {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   max-width: 50ch;
 }
-.founders__title {
+.pressure__title {
   font-size: clamp(2.5rem, 6.5vw, 5.25rem);
   line-height: 0.95;
 }
-.founders__title-accent { color: var(--accent-red); }
-.founders__lead {
+.pressure__title-accent { color: var(--accent-red); }
+.pressure__lead {
   font-size: 1.05rem;
   line-height: 1.55;
   color: var(--ink-body);
   margin: 0;
 }
-.founders__copy .btn { align-self: flex-start; }
+.pressure__copy .btn { align-self: flex-start; }
 
 /* Mobile + reduced-motion: drop sticky, stack columns, swap canvas for looping video */
 @media (max-width: 800px) {
-  .founders { min-height: auto; }
-  .founders__sticky { position: static; height: auto; }
-  .founders__row {
+  .pressure { min-height: auto; }
+  .pressure__sticky { position: static; height: auto; }
+  .pressure__row {
     grid-template-columns: 1fr;
     padding-block: clamp(3rem, 8vw, 5rem);
     gap: 2rem;
     justify-items: center;
     text-align: center;
   }
-  .founders__phone { width: 70%; max-width: 320px; }
-  .founders__copy { text-align: center; align-items: center; max-width: 50ch; }
-  .founders__copy .btn { align-self: center; }
+  .pressure__phone { width: 70%; max-width: 320px; }
+  .pressure__canvas { display: none; }
+  .pressure__video { display: block; }
+  .pressure__hint { display: none; }
+  .pressure__copy { text-align: center; align-items: center; max-width: 50ch; }
+  .pressure__copy .btn { align-self: center; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .founders { min-height: auto; }
-  .founders__sticky { position: static; height: auto; }
+  .pressure { min-height: auto; }
+  .pressure__sticky { position: static; height: auto; }
+  .pressure__canvas { display: none; }
+  .pressure__video { display: block; }
+  .pressure__hint { display: none; }
 }
