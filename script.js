@@ -34,10 +34,10 @@ const GB = {
 
     // Hardcoded baseline pair so the section never goes blank if pairs.json fails to load.
     const FALLBACK_PAIRS = [{
-      slug: 'garage',
-      label: 'Garage clearout',
-      before: 'assets/before-after/garage/before.jpg',
-      after: 'assets/before-after/garage/after.jpg'
+      slug: 'job-1',
+      label: 'Property cleanout',
+      before: 'assets/before-after/job-1/before.jpg',
+      after: 'assets/before-after/job-1/after.jpg'
     }];
     let pairs = [];
     try {
