@@ -17,4 +17,8 @@ Thumbs.db
 
 # Derived assets, extracted via ffmpeg from source MP4s. Keep MP4s in repo, regenerate frames as needed.
 assets/about-frames/
+
+# Raw client-supplied source files; converted/resized derivatives live in assets/ proper.
+assets/from-griff/
+
 .vercel

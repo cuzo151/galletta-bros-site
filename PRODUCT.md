@@ -6,7 +6,7 @@
 
 ## Business
 
-Galletta Bros Hauling. Family-run junk-removal, pressure-washing, snow-removal, and moving crew based in Old Greenwich, Connecticut. Two brothers. One truck. Phone: 203-252-0250. Hours: Mon–Sun 7am to 6pm. Service area: Old Greenwich, Greenwich, Riverside, Stamford, Darien, and surrounding Fairfield County. Yelp page exists; no website yet.
+Galletta Bros Hauling. Family-run junk-removal, pressure-washing, snow-removal, and moving crew based in Old Greenwich, Connecticut. Two brothers, both college students with 8+ years of service-industry experience: Logan plays football at Lehigh University, Griffin plays football at Villanova University. Phone: 203-252-0250. Hours: Mon–Sun 7am to 6pm. Service area: Tri-State coverage across Fairfield County, CT (Greenwich, Stamford, New Canaan, Darien, Norwalk) and Westchester County, NY (Rye, Port Chester). Yelp page exists; no website yet.
 
 ## Users
 
@@ -18,7 +18,7 @@ Secondary audience: small commercial properties (a real-estate office, a small c
 
 1. **Phone first, form second.** Most users will not fill out a form. The phone number is the headline. The form is for the 20% who prefer asynchronous.
 2. **Proof beats promises.** The before/after photo library is the most convincing thing on the site. Every other section serves the photos.
-3. **Family beats franchise.** "Two brothers, one truck, the town we grew up in" is the wedge against College HUNKS, 1-800-GOT-JUNK, LoadUp. Lean into it.
+3. **Family beats franchise.** "Two brothers, college students with eight years of service-industry experience, the town we grew up in" is the wedge against College HUNKS, 1-800-GOT-JUNK, LoadUp. Lean into it.
 4. **Cinematic, not slick.** A truck pulling up dirty and pulling away clean is the brand. Not "premium luxury" gold-foil. Not "fun startup" pastel. Workwear, asphalt, sodium-vapor light.
 5. **Speed is the offer.** Same-day pickup, plow during the storm, quote in 2 minutes. Copy and motion should feel hurried in a confident way, never frantic.
 

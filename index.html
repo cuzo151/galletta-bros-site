@@ -62,11 +62,15 @@
           "longitude": -73.5662
         },
         "areaServed": [
-          { "@type": "City", "name": "Old Greenwich, CT" },
           { "@type": "City", "name": "Greenwich, CT" },
-          { "@type": "City", "name": "Riverside, CT" },
           { "@type": "City", "name": "Stamford, CT" },
-          { "@type": "City", "name": "Darien, CT" }
+          { "@type": "City", "name": "New Canaan, CT" },
+          { "@type": "City", "name": "Darien, CT" },
+          { "@type": "City", "name": "Norwalk, CT" },
+          { "@type": "City", "name": "Rye, NY" },
+          { "@type": "City", "name": "Port Chester, NY" },
+          { "@type": "AdministrativeArea", "name": "Fairfield County, CT" },
+          { "@type": "AdministrativeArea", "name": "Westchester County, NY" }
         ],
         "openingHoursSpecification": [{
           "@type": "OpeningHoursSpecification",
@@ -129,7 +133,7 @@
         "description": "Garage, basement, attic, estate, and full property cleanouts. Each truck holds 10 cubic yards. 80 percent landfill diversion rate, items donated or recycled before disposal. Same-day service when possible.",
         "serviceType": "Junk Removal",
         "provider": { "@id": "https://gallettabros.com/#business" },
-        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "areaServed": ["Greenwich, CT", "Stamford, CT", "New Canaan, CT", "Darien, CT", "Norwalk, CT", "Rye, NY", "Port Chester, NY", "Fairfield County, CT", "Westchester County, NY"],
         "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Free on-site quote, pricing scales with truck load" } }
       },
       {
@@ -139,7 +143,7 @@
         "description": "Driveway, patio, siding, and deck pressure washing. High-pressure restorative cleaning that brings stone and wood back.",
         "serviceType": "Pressure Washing",
         "provider": { "@id": "https://gallettabros.com/#business" },
-        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "areaServed": ["Greenwich, CT", "Stamford, CT", "New Canaan, CT", "Darien, CT", "Norwalk, CT", "Rye, NY", "Port Chester, NY", "Fairfield County, CT", "Westchester County, NY"],
         "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Free on-site quote" } }
       },
       {
@@ -149,7 +153,7 @@
         "description": "Plowing, shoveling, and salting. Through the storm and all winter. Residential and small commercial.",
         "serviceType": "Snow Removal",
         "provider": { "@id": "https://gallettabros.com/#business" },
-        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "areaServed": ["Greenwich, CT", "Stamford, CT", "New Canaan, CT", "Darien, CT", "Norwalk, CT", "Rye, NY", "Port Chester, NY", "Fairfield County, CT", "Westchester County, NY"],
         "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Per-storm or seasonal contracts" } }
       },
       {
@@ -159,7 +163,7 @@
         "description": "Local moves, single-item moves, full household relocations. Careful crew, honest pricing, no surprises.",
         "serviceType": "Moving",
         "provider": { "@id": "https://gallettabros.com/#business" },
-        "areaServed": ["Old Greenwich", "Greenwich", "Riverside", "Stamford", "Darien"],
+        "areaServed": ["Greenwich, CT", "Stamford, CT", "New Canaan, CT", "Darien, CT", "Norwalk, CT", "Rye, NY", "Port Chester, NY", "Fairfield County, CT", "Westchester County, NY"],
         "offers": { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "USD", "description": "Free quote" } }
       },
       {
@@ -232,7 +236,7 @@
   <main id="main">
     <section class="hero" id="hero">
       <div class="hero__media" aria-hidden="true">
-        <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="assets/before-after/garage/after.jpg">
+        <video class="hero__video" autoplay loop muted playsinline preload="metadata" poster="assets/services/hauling.jpg">
           <source src="assets/hero.mp4" type="video/mp4" />
         </video>
         <div class="hero__fallback">
@@ -379,53 +383,20 @@
       <div class="container">
         <header class="section-head">
           <span class="eyebrow">05 · Areas We Cover</span>
-          <h2 class="display">Fairfield County, Covered.</h2>
+          <h2 class="display">Tri-State Coverage.</h2>
         </header>
 
-        <div class="areas__grid">
-          <svg class="areas__map" viewBox="0 0 800 320" role="img" aria-label="Map of southern Fairfield County coast with five towns marked">
-            <!-- Land mass -->
-            <path d="M 20,40 Q 200,20 360,60 T 700,80 L 780,140 L 780,200 Q 600,210 400,240 T 80,260 Z" fill="#f1eee7" stroke="#e0dcd2" stroke-width="1"/>
-            <!-- Coastline accent -->
-            <path d="M 20,40 Q 200,20 360,60 T 700,80 L 780,140" fill="none" stroke="#c93832" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5"/>
+        <ul class="areas__towns">
+          <li class="areas__town"><span class="areas__town-name">Greenwich</span><span class="areas__town-state">CT</span></li>
+          <li class="areas__town"><span class="areas__town-name">Stamford</span><span class="areas__town-state">CT</span></li>
+          <li class="areas__town"><span class="areas__town-name">New Canaan</span><span class="areas__town-state">CT</span></li>
+          <li class="areas__town"><span class="areas__town-name">Darien</span><span class="areas__town-state">CT</span></li>
+          <li class="areas__town"><span class="areas__town-name">Norwalk</span><span class="areas__town-state">CT</span></li>
+          <li class="areas__town"><span class="areas__town-name">Rye</span><span class="areas__town-state">NY</span></li>
+          <li class="areas__town"><span class="areas__town-name">Port Chester</span><span class="areas__town-state">NY</span></li>
+        </ul>
 
-            <!-- Pins (cx aligned to towns west to east) -->
-            <g class="areas__pin" transform="translate(140,150)">
-              <circle r="9" fill="#c93832" />
-              <circle r="20" fill="none" stroke="#c93832" stroke-width="1.5" opacity="0.5"/>
-              <text y="-22" text-anchor="middle" fill="#1a1814" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">GREENWICH</text>
-            </g>
-            <g class="areas__pin" transform="translate(240,170)">
-              <circle r="9" fill="#c93832" />
-              <circle r="20" fill="none" stroke="#c93832" stroke-width="1.5" opacity="0.5"/>
-              <text y="-22" text-anchor="middle" fill="#1a1814" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">RIVERSIDE</text>
-            </g>
-            <g class="areas__pin areas__pin--hq" transform="translate(310,160)">
-              <circle r="11" fill="#c93832" />
-              <circle r="24" fill="none" stroke="#c93832" stroke-width="2" />
-              <text y="-26" text-anchor="middle" fill="#c93832" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">OLD GREENWICH</text>
-            </g>
-            <g class="areas__pin" transform="translate(440,180)">
-              <circle r="9" fill="#c93832" />
-              <circle r="20" fill="none" stroke="#c93832" stroke-width="1.5" opacity="0.5"/>
-              <text y="-22" text-anchor="middle" fill="#1a1814" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">STAMFORD</text>
-            </g>
-            <g class="areas__pin" transform="translate(580,170)">
-              <circle r="9" fill="#c93832" />
-              <circle r="20" fill="none" stroke="#c93832" stroke-width="1.5" opacity="0.5"/>
-              <text y="-22" text-anchor="middle" fill="#1a1814" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">DARIEN</text>
-            </g>
-          </svg>
-
-          <ul class="areas__list">
-            <li><span class="areas__dot" aria-hidden="true"></span>Old Greenwich <span class="areas__hq">HQ</span></li>
-            <li><span class="areas__dot" aria-hidden="true"></span>Greenwich</li>
-            <li><span class="areas__dot" aria-hidden="true"></span>Riverside</li>
-            <li><span class="areas__dot" aria-hidden="true"></span>Stamford</li>
-            <li><span class="areas__dot" aria-hidden="true"></span>Darien</li>
-            <li class="areas__more">and surrounding Fairfield County</li>
-          </ul>
-        </div>
+        <p class="areas__regions">Plus all of Westchester County, NY and Fairfield County, CT.</p>
       </div>
     </section>
 
@@ -470,23 +441,17 @@
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="about__sticky">
-        <div class="container about__grid">
-          <figure class="about__media" data-anim aria-label="The Galletta brothers at work">
-            <canvas id="aboutCanvas" class="about__canvas"></canvas>
-            <video class="about__video" autoplay loop muted playsinline preload="metadata" poster="assets/about-frames/frame-0001.jpg">
-              <source src="assets/brothers-flex.mp4" type="video/mp4" />
-            </video>
-            <span class="about__scroll-hint">Scroll to flex</span>
-          </figure>
-          <div class="about__text">
-            <span class="eyebrow">07 · Who We Are</span>
-            <h2 class="display about__title">Two Brothers.<br />One Truck.</h2>
-            <p>We started Galletta Bros to do honest work in the town we grew up in. We show up when we say we will, we work hard, and we leave it cleaner than we found it.</p>
-            <p>If you're calling Galletta Bros, you're calling family. Not a faceless company.</p>
-            <p class="about__meta">Family-owned · Old Greenwich, CT · Insured</p>
-          </div>
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <figure class="about__media" data-anim>
+          <img src="assets/about-brothers.jpg" alt="Logan and Griffin Galletta, the two brothers behind Galletta Bros Hauling" loading="lazy" />
+        </figure>
+        <div class="about__text">
+          <span class="eyebrow">07 · Who We Are</span>
+          <h2 class="display about__title">Two Brothers.<br />One Crew.</h2>
+          <p>We are two local brothers and college students with over eight years of experience in the service industry. Logan is a football player at Lehigh University, and Griffin plays football at Villanova University.</p>
+          <p>Over the years, we have built a strong reputation for delivering high-quality, professional services, including moving, trash removal, snow removal, and a wide range of general labor and odd jobs.</p>
+          <p class="about__meta">Family-owned · Old Greenwich, CT · Insured</p>
         </div>
       </div>
     </section>
@@ -598,11 +563,14 @@
       <div class="footer__col">
         <h4>Areas</h4>
         <ul>
-          <li>Old Greenwich</li>
-          <li>Greenwich</li>
-          <li>Riverside</li>
-          <li>Stamford</li>
-          <li>Darien</li>
+          <li>Greenwich, CT</li>
+          <li>Stamford, CT</li>
+          <li>New Canaan, CT</li>
+          <li>Darien, CT</li>
+          <li>Norwalk, CT</li>
+          <li>Rye, NY</li>
+          <li>Port Chester, NY</li>
+          <li>Fairfield + Westchester</li>
         </ul>
       </div>
       <div class="footer__col">
