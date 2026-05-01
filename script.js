@@ -12,7 +12,6 @@ const GB = {
     GB.initWork();
     GB.initReviews();
     GB.initAnimations();
-    GB.initPressureCanvas();
   },
 
   detectHeroVideo() {
@@ -196,72 +195,6 @@ const GB = {
       });
     }
 
-  },
-
-  initPressureCanvas() {
-    const canvas = document.getElementById('pressureCanvas');
-    if (!canvas) return;
-    if (window.matchMedia('(max-width: 800px)').matches) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const ctx = canvas.getContext('2d');
-    const TOTAL = 197;
-    const frames = [];
-    let loaded = 0;
-    let currentFrame = 0;
-
-    const resize = () => {
-      const wrap = canvas.parentElement;
-      if (!wrap) return;
-      const w = wrap.clientWidth;
-      const h = wrap.clientHeight;
-      if (!w || !h) return;
-      canvas.width = w;
-      canvas.height = h;
-      canvas.style.width = w + 'px';
-      canvas.style.height = h + 'px';
-      drawFrame(currentFrame);
-    };
-
-    const drawFrame = (idx) => {
-      const img = frames[idx];
-      if (!img || !img.complete || !canvas.width) return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const r = Math.max(canvas.width / img.width, canvas.height / img.height);
-      const w = img.width * r, h = img.height * r;
-      ctx.drawImage(img, (canvas.width - w) / 2, (canvas.height - h) / 2, w, h);
-      currentFrame = idx;
-    };
-
-    for (let i = 1; i <= TOTAL; i++) {
-      const img = new Image();
-      img.src = 'assets/pressure-frames/frame-' + String(i).padStart(4, '0') + '.jpg';
-      img.onload = () => {
-        loaded++;
-        if (loaded === 1) { resize(); drawFrame(0); }
-      };
-      frames.push(img);
-    }
-
-    window.addEventListener('resize', resize);
-    setTimeout(resize, 50);
-
-    if (window.gsap && window.ScrollTrigger) {
-      gsap.to({ frame: 0 }, {
-        frame: TOTAL - 1,
-        snap: 'frame',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.pressure',
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: 0.3
-        },
-        onUpdate: function () {
-          drawFrame(Math.round(this.targets()[0].frame));
-        }
-      });
-    }
   }
 };
 
